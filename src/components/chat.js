@@ -12,7 +12,7 @@ class ChatApp extends Component {
     const { authorId, messages, sendMessage } = this.props;
 
     return (
-      <div>
+      <div id="app">
         <ChatList messages={messages} />
         <ChatInput onSave={(text) => sendMessage({ t: new Date(), text, authorId })} />
       </div>

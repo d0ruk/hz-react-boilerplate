@@ -67,6 +67,7 @@ module.exports = {
   },
   postcss: function() {
     return [
+      require("postcss-flexbox"),
       require("rucksack-css")({
         autoprefixer: true
       })

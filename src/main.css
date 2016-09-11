@@ -1,10 +1,16 @@
-:fullscreen body {
+body {
   background-color: green;
   display: flex;
   height: 100%;
+  box: vertical space-between;
 }
 
-p {
+h3 {
   font-size: responsive 32px 48px;
   font-range: 420px 1280px;
+}
+
+#app {
+  box: horizontal space-around;
+  border: 2px solid red;
 }
