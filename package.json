@@ -4,10 +4,11 @@
   "description": "a combination of; horizon, react, react-hz, webpack",
   "main": "./src/index.js",
   "scripts": {
+    "start": "npm run build && npm run hz",
     "dev": "NODE_ENV=development node devServer.js",
     "build": "NODE_ENV=production webpack --progress --colors",
     "watch": "NODE_ENV=development webpack --progress --colors --watch",
-    "hz": "horizon serve --dev --debug yes -p 7001"
+    "hz": "horizon serve --dev --bind all -p 7001"
   },
   "keywords": [],
   "author": "Doruk Kutlu",
