@@ -1,5 +1,10 @@
 :fullscreen body {
-  background-color: lightgray;
+  background-color: green;
   display: flex;
   height: 100%;
+}
+
+p {
+  font-size: responsive 32px 48px;
+  font-range: 420px 1280px;
 }

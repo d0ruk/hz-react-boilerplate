@@ -22,7 +22,15 @@ new WebpackDevServer(webpack(config), {
   contentBase: "./",
   publicPath: config.output.publicPath,
   hot: true,
+  quiet: false,
+  noInfo: false,
+  // lazy: true,
   historyApiFallback: true,
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
+  },
+  stats: { colors: true },
   proxy: {
     '/horizon/**': {
       target: 'http://localhost:7001',

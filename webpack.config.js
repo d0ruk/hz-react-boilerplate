@@ -40,6 +40,10 @@ module.exports = {
   module: {
     noParse: ["ws"],
     loaders: [
+      // {
+      //   test: /\.html$/,
+      //   loader: "file?name=[name].[ext]"
+      // },
       {
         test: /\.jsx?$/,
         include: path.join(__dirname, "src"),
@@ -63,8 +67,9 @@ module.exports = {
   },
   postcss: function() {
     return [
-      require("autoprefixer")({ browsers: ["last 2 versions"] }),
-      // require("postcss-color-rebeccapurple")
+      require("rucksack-css")({
+        autoprefixer: true
+      })
     ]
   },
   externals: ["ws"],

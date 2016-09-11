@@ -7,7 +7,11 @@ import ChatApp from "./components/chat";
 
 require("./main.css");
 
-const hrz = window.Horizon();
+const opts = process.env.NODE_ENV === "development" ? {
+  host: "localhost:7001"
+} : {}
+
+const hrz = window.Horizon(opts);
 // let DevTools = createDevTools(hrz);
 
 const App = () => (
