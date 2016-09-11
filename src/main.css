@@ -1,0 +1,5 @@
+:fullscreen body {
+  background-color: lightgray;
+  display: flex;
+  height: 100%;
+}

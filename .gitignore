@@ -1,0 +1,5 @@
+rethinkdb_data
+**/*.log
+.hz/secrets.toml
+dist
+node_modules
