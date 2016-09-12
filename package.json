@@ -1,6 +1,6 @@
 {
   "name": "hz-react-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a combination of; horizon, react, react-hz, webpack",
   "main": "./src/index.js",
   "scripts": {
