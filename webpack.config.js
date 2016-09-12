@@ -3,6 +3,7 @@ var dev = process.env.NODE_ENV !== "production";
 var path = require("path");
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack_dashboard = require("webpack-dashboard/plugin");
 
 module.exports = {
   context: __dirname + "/src",
@@ -20,6 +21,7 @@ module.exports = {
   },
   plugins: dev ? [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack_dashboard(),
     new ExtractTextPlugin("style.css", { publicPath: "/", allChunks: true }),
     new webpack.DefinePlugin({
       "process.env": {

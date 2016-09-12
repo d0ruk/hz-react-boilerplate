@@ -5,13 +5,17 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "npm run build && npm run hz",
-    "dev": "concurrently --kill-others 'npm run devServer' 'npm run hz'",
-    "devServer": "NODE_ENV=development node devServer.js",
+    "dev": "NODE_ENV=development concurrently -kr 'webpack-dashboard -- node devServer.js' 'horizon serve --dev --bind all -p 7001'",
+    "devServer": "NODE_ENV=development webpack-dashboard -- node devServer.js",
     "build": "NODE_ENV=production webpack --progress --colors",
     "watch": "NODE_ENV=development webpack --progress --colors --watch",
     "hz": "horizon serve --dev --bind all -p 7001"
   },
-  "keywords": [],
+  "keywords": [
+    "horizon",
+    "react-hz",
+    "rethinkdb"
+  ],
   "author": "Doruk Kutlu",
   "license": "MIT",
   "dependencies": {
@@ -39,6 +43,7 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
+    "webpack-dashboard": "^0.1.8",
     "webpack-dev-server": "^1.15.1"
   }
 }

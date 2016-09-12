@@ -42,5 +42,5 @@ new WebpackDevServer(webpack(config), {
   if (err) {
     return console.log(chalk.bgRed.white.bold(err));
   }
-  console.log(`Listening at http://localhost:${chalk.bgGreen.white.bold(3000)}/`);
+  console.log(`Listening at http://localhost:${chalk.bgGreen.black.bold(3001)}/`);
 });
