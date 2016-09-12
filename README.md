@@ -4,10 +4,10 @@
 
 ### TODO
 
-[] Use horizon-devtools
+- [ ] Use horizon-devtools
 
-[] Configure webpack to move .html file when bundling for production
+- [ ] Configure webpack to move .html file when bundling for production
 
-[] eslint
+- [ ] eslint
 
-[] an actual FE app
+- [ ] an actual FE app
