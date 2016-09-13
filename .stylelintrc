@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "unit-whitelist": ["em", "rem", "s", "%"],
+    "string-quotes": "double",
+    "value-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "at-rule-no-vendor-prefix": true,
+    "selector-attribute-quotes": "never",
+    "comment-whitespace-inside": "never",
+    "comment-empty-line-before": "never",
+    "property-no-unknown": false
+  }
+}
