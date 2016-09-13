@@ -69,10 +69,17 @@ module.exports = {
   },
   postcss: function() {
     return [
-      require("postcss-flexbox"),
+      // require("postcss-flexbox"),
+      require("postcss-nested"),
+      require("postcss-import"),
+      require("postcss-apply"),
+      require("postcss-color-function"),
       require("rucksack-css")({
         autoprefixer: true
-      })
+      }),
+      require("postcss-font-magician"),
+      require("lost"),
+      require("css-mqpacker"),
     ]
   },
   externals: ["ws"],

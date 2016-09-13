@@ -1,16 +1,36 @@
+@import "normalize.css";
+@import "cssrecipes-defaults";
+
+
+:root {
+  --border: 0.5rem solid black;
+}
+
 body {
-  background-color: green;
-  display: flex;
-  height: 100%;
-  box: vertical space-between;
+  background-color: color(white blackness(10%));
+  /*lost-waffle: 2/3 6;*/
+  height: auto;
+  font-family: "Ubuntu";
 }
 
 h3 {
-  font-size: responsive 32px 48px;
-  font-range: 420px 1280px;
+  color: black;
+  border: var(--border);
+  /*lost-column: 1/3 1;*/
+  font-size: responsive 2rem 5rem;
+  font-range: 10rem 20rem;
+  @media (max-width: 800px) {
+      color: red;
+  }
 }
 
 #app {
-  box: horizontal space-around;
-  border: 2px solid red;
+  color: white;
+  background-color: color(yellow alpha(30%));
+  /*lost-column: 2/3 4;*/
+  border: var(--border);
+  margin: 5rem;
+  @media (max-width: 800px) {
+      color: green;
+  }
 }
