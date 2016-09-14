@@ -4,15 +4,19 @@ import verge from "verge";
 import { connect } from "react-hz";
 import ChatList from "./list";
 import ChatInput from "./input";
+import Responsive from "./responsive"
+
+// random hex color code i.e. dddeee (without the #)
+const genRandColor = () => "0123456789abcdef".split("").map((v,i,a) => i > 5 ? null : a[Math.floor(Math.random()*16)]).join("");
 
 class ChatApp extends Component {
-  static defaultProps = { authorId: '_' + Math.random().toString(36).substr(2, 9) }
+  static defaultProps = { authorId: genRandColor() }
   static childContextTypes = { viewport: PropTypes.object }
 
   constructor(props) {
     super(props);
     this.state = {
-      "viewport": {},
+      "viewport": null,
     };
     this.resizeTimeout = 0;
   }
@@ -28,7 +32,7 @@ class ChatApp extends Component {
         this.resizeTimeout = setTimeout(() => {
           this.resizeTimeout = null;
           updateViewportDimensions();
-        }, 66); // rate of 15fps
+        }, 2016);
       }
     }
 
@@ -45,14 +49,16 @@ class ChatApp extends Component {
     resizeThrottler();
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return true;
-  // }
+  shouldComponentUpdate(nextProps, nextState) {
+    return true;
+    console.log(arguments);
+  }
 
   render() {
     const { authorId, messages, sendMessage } = this.props;
     return (
       <div id="app">
+        <Responsive />
         <ChatList messages={messages} />
         <ChatInput onSave={(text) => sendMessage({ t: new Date(), text, authorId })} />
       </div>

@@ -33,7 +33,7 @@ class ChatInput extends Component {
           onChange={(event) => this.setState({ text: event.target.value })}
           onKeyDown={::this._handleSubmit}
           autoFocus={true}
-          placeholder="input" />
+          placeholder="say something" />
       </div>
     );
   }

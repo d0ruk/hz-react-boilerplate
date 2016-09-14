@@ -7,7 +7,7 @@ var webpack_dashboard = require("webpack-dashboard/plugin");
 
 module.exports = {
   context: __dirname + "/src",
-  devtool: dev ? "inline-sourcemap" : null,
+  devtool: dev ? "#cheap-module-eval-source-map" : null,
   entry: dev ? [
     "react-hot-loader/patch",
     "webpack-dev-server/client?http://localhost:3000",
