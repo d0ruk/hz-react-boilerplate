@@ -31,7 +31,7 @@ module.exports = {
   ] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
     new ExtractTextPlugin("style.css", { allChunks: true }),
     new webpack.DefinePlugin({
       "process.env": {
@@ -84,7 +84,8 @@ module.exports = {
   },
   externals: ["ws"],
   resolve: {
-    extensions: ["", ".js", ".jsx", ".json"]
+    extensions: ["", ".js", ".jsx", ".json"],
+    root: path.join(__dirname, "node_modules"),
   },
   node: {
     "tls": "empty",

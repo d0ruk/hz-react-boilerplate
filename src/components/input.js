@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ChatInput extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { text: '' };
-
-    this._handleSubmit = this._handleSubmit.bind(this);
+    this.state = { text: "" };
   }
+
   _handleSubmit(event) {
 
     const { onSave } = this.props;
@@ -19,7 +18,7 @@ class ChatInput extends Component {
 
       if (value) {
         onSave(value);
-        this.setState({ text: '' });
+        this.setState({ text: "" });
       }
     }
   }
@@ -28,12 +27,11 @@ class ChatInput extends Component {
     const { text } = this.state;
 
     return (
-      <div id='input' className='row'>
+      <div id="inputContainer">
         <input
-          className='u-full-width'
           value={text}
           onChange={(event) => this.setState({ text: event.target.value })}
-          onKeyDown={this._handleSubmit}
+          onKeyDown={::this._handleSubmit}
           autoFocus={true}
           placeholder="input" />
       </div>
