@@ -31,10 +31,6 @@ body {
   }
 }
 
-/*#resp {
-  display: inherit;
-}*/
-
 #inputContainer {
   display: flex;
 
@@ -98,6 +94,6 @@ body {
   }
 
   img {
-    margin-right: auto;
+    display: inherit;
   }
 }

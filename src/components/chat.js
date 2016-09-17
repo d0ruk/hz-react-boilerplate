@@ -49,11 +49,6 @@ class ChatApp extends Component {
     resizeThrottler();
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-    console.log(arguments);
-  }
-
   render() {
     const { authorId, messages, sendMessage } = this.props;
     return (
