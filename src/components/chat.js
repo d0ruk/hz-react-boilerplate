@@ -6,8 +6,8 @@ import ChatList from "./list";
 import ChatInput from "./input";
 import Responsive from "./responsive"
 
-// random hex color code i.e. dddeee (without the #)
-const genRandColor = () => "0123456789abcdef".split("").map((v,i,a) => i > 5 ? null : a[Math.floor(Math.random()*16)]).join("");
+// www.paulirish.com/2009/random-hex-color-code-snippets/
+const genRandColor = () => "0123456789abcdef".split("").map((v, i, a) => i > 5 ? null : a[Math.floor(Math.random()*16)]).join("");
 
 class ChatApp extends Component {
   static defaultProps = { authorId: genRandColor() }

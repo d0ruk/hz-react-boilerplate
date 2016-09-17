@@ -1,19 +1,8 @@
-
-var path = require('path');
-var chalk = require("chalk");
-// var app = require("express")();
-// var logger = require('morgan');
-// var bodyParser = require('body-parser');
-var webpack = require("webpack");
-var WebpackDevServer = require("webpack-dev-server");
-var config = require("./webpack.config");
-
-// app.use(logger('dev'));
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static(path.join(__dirname, 'public')));
-//
-// app.use('/', routes);
+const path = require("path");
+const chalk = require("chalk");
+const webpack = require("webpack");
+const WebpackDevServer = require("webpack-dev-server");
+const config = require("./webpack.config");
 
 new WebpackDevServer(webpack(config), {
   contentBase: "./",
@@ -29,9 +18,8 @@ new WebpackDevServer(webpack(config), {
   },
   stats: { colors: true },
   proxy: {
-    '/horizon/**': {
-      target: 'http://localhost:7001',
-      // changeOrigin: true,
+    "/horizon/**": {
+      target: "http://localhost:7001",
       secure: false,
     },
   },

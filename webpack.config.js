@@ -4,6 +4,7 @@ var path = require("path");
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack_dashboard = require("webpack-dashboard/plugin");
+var browserSync = require("browser-sync-webpack-plugin");
 
 module.exports = {
   context: __dirname + "/src",
@@ -28,6 +29,19 @@ module.exports = {
         "NODE_ENV": JSON.stringify("development")
       }
     }),
+    new browserSync({
+      host: "localhost",
+      port: 3100,
+      // proxy the Webpack Dev Server endpoint
+      // (which should be serving on http://localhost:3000/)
+      // through BrowserSync
+      proxy: "http://localhost:3000/"
+    }, {
+      // prevent BrowserSync from reloading the page
+      // and let Webpack Dev Server take care of this
+      reload: false
+    }
+    )
   ] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),

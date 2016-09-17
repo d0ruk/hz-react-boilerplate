@@ -10,4 +10,4 @@
 
 - [ ] eslint
 
-- [ ] an actual FE app
+- [ ] stylus (css modules)
