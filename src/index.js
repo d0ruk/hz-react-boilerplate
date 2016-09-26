@@ -4,7 +4,7 @@ import { HorizonProvider, HorizonRoute } from "react-hz";
 import ChatApp from "./components/chat";
 // import { createDevTools } from "horizon-devtools";
 
-require("./main.css");
+import "./main.styl";
 
 const opts = process.env.NODE_ENV === "development"
   ? { host: "localhost:7001" }

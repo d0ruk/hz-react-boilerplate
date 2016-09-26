@@ -10,4 +10,4 @@
 
 - [ ] eslint
 
-- [ ] stylus (css modules)
+- [ ] css modules (mqpacker, lost, import)
