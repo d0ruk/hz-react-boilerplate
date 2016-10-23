@@ -27,12 +27,11 @@ body
   display: flex
 
   input
-    border: .15rem solid #ddd
+    border: .15rem solid alpha(red, .3)
     flex: 1
     line-height: 2rem
     margin: .5rem .15rem .25rem 0
     outline: 0
-    /*margin: .3rem*/
     padding: .25rem 0 .25rem .25rem
     transition: all .3s ease-in-out
 
@@ -57,7 +56,7 @@ body
 .messageList
   display: flex
   margin: 0 1rem
-  /*flex-direction: row-reverse*/
+  flex-direction: row
   justify-content: flex-end
   flex-flow: row-reverse wrap-reverse
 
@@ -66,7 +65,7 @@ body
     justify-content: flex-start
 
 .messageItem
-  background-color: alpha(green, .3)
+  background-color: alpha(green, .2)
   border: $border
   color: black
   display: flex
@@ -77,5 +76,5 @@ body
   span
     margin: .3rem 0
 
-  img
-    display: inherit
+  // img
+    // display: inherit
