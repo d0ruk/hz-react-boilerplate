@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/ellerbrock/open-source-badges/master/badges/licence-mit/mit-125x28.png)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9d217b4bfc4e48ee9a2582237443ad14)](https://www.codacy.com/app/dorukk/hz-react-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Norm-/hz-react-boilerplate&amp;utm_campaign=Badge_Grade)
 [![Dependency Status](https://www.versioneye.com/user/projects/580e766c912815137ff3c6c6/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/580e766c912815137ff3c6c6)
 
